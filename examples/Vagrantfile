@@ -13,9 +13,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.hostmanager.include_offline = true
   config.vm.box = "chef/centos-6.5"
 
-  config.vm.define "iptables_node" do |iptables_node|
-    controller1.vm.network :private_network, ip: "192.168.59.59"
-    controller1.vm.hostname = "iptables_node"
+  config.vm.define "rabbitmq" do |rabbitmq|
+    controller1.vm.network :private_network, ip: "192.168.20.10"
+    controller1.vm.hostname = "rabbitmq"
+  end
+  config.vm.define "pytables" do |pytables|
+    controller1.vm.network :private_network, ip: "192.168.20.11"
+    controller1.vm.hostname = "pytables"
   end
 
 

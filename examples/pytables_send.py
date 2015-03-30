@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import pika
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.20.10'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='192.168.20.10'))
 channel = connection.channel()
 
 channel.queue_declare(queue='ip')

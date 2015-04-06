@@ -41,4 +41,8 @@ You can using the flowing script to test your environment.
 
  * examples/publish/    # Publish/Subscribe: Sending messages to many consumers at once.
  * examples/topics/      # Topics: Receiving messages based on a pattern.
+ 
+
+## Note
+The pytables defaults to using Publis/Subscribe mode.
 

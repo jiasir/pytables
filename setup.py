@@ -9,7 +9,7 @@ except ImportError:
     sys.exit(1)
 
 setup(name='pytables',
-      version='0.1.0',
+      version='0.1.1',
       description='Deny IPs from Queues',
       author='jiasir',
       author_email='jiasir@icloud.com',

@@ -1,4 +1,6 @@
 import sys
+import os
+import shutil
 
 try:
     from setuptools import setup, find_packages
@@ -15,9 +17,11 @@ setup(name='pytables',
       author_email='jiasir@icloud.com',
       url='https://github.com/jiasir/pytables/',
       license='MIT License',
-      install_requires=['pika==0.9.8'],
+      install_requires=['pika == 0.9.8'],
       packages=find_packages(),
       scripts=[
           'bin/pytables',
       ],
       data_files=[],)
+os.mkdir('/etc/pytables')
+shutil.copy('etc/pytables.conf', '/etc/pytables/pytables.conf')
